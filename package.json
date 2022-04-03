@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/epatrezze.lwc-randonpet",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve xHyt0yDoqk0Gw5dto8aL --open"
+  }
+}

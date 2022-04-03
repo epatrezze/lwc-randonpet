@@ -1,0 +1,29 @@
+<template>
+	<div>
+		<lightning-radio-group name="radioGroup"
+                          label="Radio Group"
+                          options={options}
+                          value={value}
+                          type="radio"
+													onchange={selecionaOpcao}>
+		</lightning-radio-group>
+	</div>
+
+  <div class="slds-p-around_medium lgc-bg">
+			<lightning-button variant="brand" 
+												label={botaoLabel} 
+												title="buscar gatinho" 
+												onclick={buscarGatinho} 
+												class="slds-m-left_x-small">
+			</lightning-button>
+  </div>
+
+	<div>
+		<template if:true={temFoto}>
+			  <div>
+					<img src={pictureUrl}/>
+				</div>
+			
+		</template>
+	</div>
+</template>
