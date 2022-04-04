@@ -9,4 +9,16 @@ p {
     background-color: #fafaf9;
     height: 100vh;
     overflow: scroll;
+    align-content: center;
+}
+.botao__buscar {
+    align-content: center;
+}
+img {
+    border-color: gray;
+    border-radius: 2%;
+    width: 80%;
+    height: 50%;
+    align: center;
+    
 }

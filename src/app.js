@@ -5,12 +5,13 @@ temFoto = false;
 pictureUrl;
 value = '';
 botaoLabel = 'Give me a ?';
+urlGato = `https://api.thecatapi.com/v1/images/search`;
+urlCachorro = `https://random.dog/woof.json`;
 
 buscarGatinho(evento) {
-    const url = this.value;
+    const url = (this.value == 'gatinhos') ? this.urlGato : this.urlCachorro;
     console.log('url: ',url)
-    const urlGato = `https://api.thecatapi.com/v1/images/search`;
-    const urlCachorro = `https://random.dog/woof.json`;
+    
     const options = {
         method: 'GET'
     }
@@ -19,7 +20,7 @@ buscarGatinho(evento) {
     ).then(
           data => {
               console.log('data ',data)
-              this.pictureUrl = (url == urlGato) ? data[0].url : data.url;
+              this.pictureUrl = (url == this.urlGato) ? data[0].url : data.url;
               console.log('data ',this.pictureUrl)
               this.temFoto = true;
             
@@ -28,13 +29,14 @@ buscarGatinho(evento) {
 }
 selecionaOpcao(evento){
     this.value = evento.target.value
-    console.log(evento.target.label.valeu)
+    console.log(evento.target.value)
+    this.botaoLabel = (evento.target.value != 'doguinhos') ? 'Give me a Gatinhos' : 'Give me a Doguinhos'
 }
 
 get options() {
     return [
-        { label: 'Gatinhos', value: `https://api.thecatapi.com/v1/images/search` },
-        { label: 'Doguinhos', value: `https://random.dog/woof.json` },
+        { label: 'Gatinhos', value: 'gatinhos' },
+        { label: 'Doguinhos', value: 'doguinhos' },
     ];
 }
 }
