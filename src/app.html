@@ -1,15 +1,15 @@
 <template>
 	<div>
 		<lightning-radio-group name="radioGroup"
-                          label="Radio Group"
+                          label="Selecione o animal:"
                           options={options}
                           value={value}
-                          type="radio"
+                          type="button"
 													onchange={selecionaOpcao}>
 		</lightning-radio-group>
 	</div>
 
-  <div class="slds-p-around_medium lgc-bg">
+  <div class="slds-p-around_medium lgc-bg botao__buscar">
 			<lightning-button variant="brand" 
 												label={botaoLabel} 
 												title="buscar gatinho" 
@@ -20,7 +20,7 @@
 
 	<div>
 		<template if:true={temFoto}>
-			  <div>
+			  <div class="div__imagemAPI">
 					<img src={pictureUrl}/>
 				</div>
 			
