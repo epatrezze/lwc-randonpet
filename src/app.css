@@ -1,3 +1,10 @@
+/**
+ * @file app.css - Estilos principais do componente RandonPet
+ * @description Arquivo de estilos CSS para o componente de exibição de fotos de animais
+ * @author WCD
+ * @version 1.0.0
+ */
+
 h1 {
     color: rgb(0, 112, 210);
 }
